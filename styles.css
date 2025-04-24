@@ -1,93 +1,5 @@
 
-* design{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-/* Body */
-body {
-  background-color: white;
-  color: #2C3E50;
-  line-height: 1.6;
-  text-align:center;
-}
-
-/* Header */
-header {
-  background-color: #FADADD; /* pink */
-  padding: 1.5rem 2rem;
-  text-align: center;
-}
-
-header h1 {
-  color: #2C3E50;
-  font-size: 2.5rem;
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding-left: 1rem;
-}
-
-nav li {
-  margin: 1rem;
-  text-align:center;
-}
-
-nav a {
-  text-decoration: none;
-  color: #2C3E50;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #A7C7E7; /* blue hover */
-}
-
-/* Main Content */
-main {
-  padding: 2rem;
-  background-color: #A7C7E7; /* light blue */
-  color: #2C3E50;
-}
-
-section {
-  margin-bottom: 2rem;
-}
-
-/* Buttons */
-.cta-button {
-  background-color: #FADADD;
-  color: #2C3E50;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #FFF5BA;
-}
-
-/* Footer */
-footer {
-  background-color: #2C3E50;
-  color: #FFF5BA;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-/* Reset & Base */
+/* Base Reset & Defaults */
 * {
   margin: 0;
   padding: 0;
@@ -95,33 +7,42 @@ footer {
   font-family: 'Segoe UI', sans-serif;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   background-color: white;
   color: #2C3E50;
   line-height: 1.6;
   padding: 1rem;
+  text-align: center;
 }
 
 /* Header */
 header {
-  background-color: #FADADD; 
+  background-color: #FADADD;
   padding: 2rem;
-  text-align: center;
 }
 
 header h1 {
-  font-size: 2.2rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   color: #2C3E50;
 }
 
+/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 1rem;
   margin-top: 1rem;
 }
 
+nav li {
+  text-align: center;
+}
 
 nav a {
   text-decoration: none;
@@ -134,18 +55,51 @@ nav a:hover {
   color: #A7C7E7;
 }
 
-/* Main Form Container */
+/* Main Content */
+main {
+  padding: 2rem;
+  background-color: #A7C7E7;
+  color: #2C3E50;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* Call-to-Action Buttons */
+.cta-button,
+input[type="submit"],
+input[type="reset"] {
+  background-color: #FADADD;
+  color: #2C3E50;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #FFF5BA;
+}
+
+/* Form Container */
 .form-container {
-  max-width: 700px;
+  max-width: 90%;
   margin: 2rem auto;
   background-color: #A7C7E7;
-  padding: 2rem;
+  padding: 5vw;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 form fieldset {
-  border: 20px solid #FADADD;
+  border: 2px solid #FADADD;
   border-radius: 10px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
@@ -177,35 +131,46 @@ input[type="password"] {
   font-size: 1rem;
 }
 
-input[type="submit"],
-input[type="reset"] {
-  background-color: #FADADD;
-  color: #2C3E50;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 25px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-right: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-  background-color: #FFF5BA;
+/* Testimonial Card */
+.testimonial-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 /* Footer */
 footer {
-  margin-top: 3rem;
-  text-align: center;
   background-color: #2C3E50;
   color: #FFF5BA;
+  text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+  margin-top: 3rem;
 }
 
-/* Responsive Design */
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  header {
+    padding: 1.5rem;
+  }
+
+  .form-container {
+    padding: 4vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
@@ -215,14 +180,4 @@ footer {
   .form-container {
     padding: 1rem;
   }
-}.testimonial-card img {
-  width: 100%;         /* Makes all images fill the card */
-  height: auto;        /* Maintains aspect ratio */
-  object-fit: cover;   /* Ensures consistent cropping if needed */
-  border-radius: 8px;  /* Optional: smooth corners */
-}
-.container{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content: space-between;
 }
