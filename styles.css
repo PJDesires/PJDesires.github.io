@@ -221,4 +221,8 @@ footer {
   object-fit: cover;   /* Ensures consistent cropping if needed */
   border-radius: 8px;  /* Optional: smooth corners */
 }
-
+.container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
