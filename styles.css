@@ -181,3 +181,10 @@ footer {
     padding: 1rem;
   }
 }
+/* Homepage Hero Image */
+.home-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
