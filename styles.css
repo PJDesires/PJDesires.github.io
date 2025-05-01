@@ -106,16 +106,23 @@ input[type="reset"]:hover {
 form fieldset {
   border: 2px solid #FADADD;
   border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  margin-bottom: 2rem;
   background-color: #ffffff;
+  position: relative
 }
 
-legend {
+form legend {
   font-size: 1.2rem;
   font-weight: bold;
   color: #2C3E50;
   padding: 0 0.5rem;
+  background-color: #ffffff;
+  position: absolute;
+  top: -0.8rem;
+  left: 1rem;
+  border-radius: 10px;
+  padding: 0 0.75rem;
 }
 
 form label {
