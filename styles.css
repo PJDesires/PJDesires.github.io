@@ -171,7 +171,7 @@ form input[type="reset"] {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   text-align: center;
-  transition:  transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 100%;
   width: 100%;
 }
