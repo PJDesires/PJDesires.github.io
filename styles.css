@@ -95,10 +95,10 @@ input[type="reset"]:hover {
 
 /* Form Container */
 .form-container {
-  max-width: 90%;
+  max-width: 600px;
   margin: 2rem auto;
   background-color: #A7C7E7;
-  padding: 5vw;
+  padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -118,24 +118,29 @@ legend {
   padding: 0 0.5rem;
 }
 
-label {
+form label {
   display: block;
-  margin-bottom: 0.5rem;
   margin-top: 1rem;
+  font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="password"] {
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="password"] {
   width: 100%;
   padding: 0.5rem;
   margin-top: 0.3rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
+  box-sizing: border-box;
 }
-
+form input[type="submit"],
+form input[type="reset"] {
+  width: 48%;
+  margin-top: 1rem;
+}
 /* Testimonial Card */
 .testimonial-card img {
   width: 100%;
