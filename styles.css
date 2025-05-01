@@ -195,35 +195,29 @@ form input[type="reset"] {
 .image-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 75%; /* 4:3 aspect ratio */
+  padding-top: 100%; 
   overflow: hidden;
 }
-
-/* Main image shown by default */
-.main-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: opacity 0.3s ease;
-}
-
-/* Second image shown on hover */
-.hover-img {
+.image-wrapper img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
-  opacity: 0;
+  height: 100%;
+  object-fit: cover;
   transition: opacity 0.3s ease;
   border-radius: 8px;
 }
 
-.image-wrapper:hover .hover-img {
+.image-wrapper img.hover-img {
+  opacity: 0;
+}
+
+.image-wrapper:hover img.hover-img {
   opacity: 1;
 }
 
-.image-wrapper:hover .main-img {
+.image-wrapper:hover img.main-img {
   opacity: 0;
 }
 
