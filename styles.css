@@ -1,3 +1,4 @@
+
 /* Base Reset & Defaults */
 * {
   margin: 0;
@@ -41,12 +42,7 @@ nav ul {
   gap: 1rem;
   margin-top: 1rem;
 }
-ul.no-bullets,
-ul.no-bullets li {
-  list-style-type: none;
-  padding-left: 0;
-  margin-left: 0;
-}
+
 nav li {
   text-align: center;
 }
@@ -164,15 +160,6 @@ form input[type="reset"] {
   justify-items: center;
 }
 
-/* Product Grid Layout */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-  justify-items: center;
-}
-
 /* Individual product card */
 .product-card {
   background-color: #fff;
@@ -195,9 +182,10 @@ form input[type="reset"] {
 .image-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 100%; 
+  padding-top: 100%;  /* Square aspect ratio */
   overflow: hidden;
 }
+
 .image-wrapper img {
   position: absolute;
   top: 0;
@@ -209,14 +197,17 @@ form input[type="reset"] {
   border-radius: 8px;
 }
 
+/* Initially hide the hover image */
 .image-wrapper img.hover-img {
   opacity: 0;
 }
 
+/* Show the hover image on hover */
 .image-wrapper:hover img.hover-img {
   opacity: 1;
 }
 
+/* Hide the main image on hover */
 .image-wrapper:hover img.main-img {
   opacity: 0;
 }
@@ -274,7 +265,6 @@ form input[type="reset"] {
   }
 }
 
-
 .testimonial-card strong {
   font-size: 1.1rem;
 }
@@ -289,37 +279,3 @@ footer {
   margin-top: 3rem;
   word-wrap: break-word;
 }
-
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  header {
-    padding: 1.5rem;
-  }
-
-  .form-container {
-    padding: 4vw;
-  }
-}
-
-@media (max-width: 768px) {
-  .cta-button {
-    width: 100%;
-    text-align: center;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .form-container {
-    padding: 1rem;
-  }
-}
-
