@@ -116,13 +116,14 @@ form legend {
   font-size: 1.2rem;
   font-weight: bold;
   color: #2C3E50;
-  padding: 0 0.5rem;
+  padding: 0.25rem 0.75rem;
   background-color: #ffffff;
   position: absolute;
-  top: -0.8rem;
+  top: 0;
   left: 1rem;
-  border-radius: 10px;
-  padding: 0 0.75rem;
+  transform: translateY(-50%);
+  border-radius: 8px;
+  border: 1px solid #FADADD;
 }
 
 form label {
