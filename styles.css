@@ -192,6 +192,22 @@ form input[type="reset"] {
 .product-card strong {
   font-size: 1.1rem;
 }
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-img {
+  display: none;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+.product-card:hover .hover-img {
+  display: block;
+}
 
 .testimonial-card strong {
   font-size: 1.1rem;
