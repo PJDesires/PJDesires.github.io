@@ -39,7 +39,8 @@ nav ul {
   gap: 1rem;
   margin-top: 1rem;
 }
-.no-bullets{
+ul.no-bullets,
+ul.no-bullets li {
    list-style-type: none;
   padding-left: 0;
   margin-left: 0;
