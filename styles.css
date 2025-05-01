@@ -106,7 +106,7 @@ input[type="reset"]:hover {
 form fieldset {
   border: 2px solid #FADADD;
   border-radius: 10px;
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  padding: 2.5rem;
   margin-bottom: 2rem;
   background-color: #ffffff;
   position: relative
@@ -118,12 +118,12 @@ form legend {
   color: #2C3E50;
   padding: 0.25rem 0.75rem;
   background-color: #ffffff;
-  position: absolute;
-  top: 0;
-  left: 1rem;
-  transform: translateY(-50%);
-  border-radius: 8px;
   border: 1px solid #FADADD;
+  border-radius: 8px;
+  margin: 0 auto; /* Center horizontally */
+  text-align: center;
+  display: table; /* Needed for margin auto to work on legend */
+}
 }
 
 form label {
